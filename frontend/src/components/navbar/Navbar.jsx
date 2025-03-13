@@ -6,7 +6,7 @@ import { assets } from '../../assets/assets.js'
 const Navbar = () => {
 
     const [menu, setMenu] = useState("Menu");
-
+ 
   return (
     <div className='navbar'>
         <img src={assets.logo} alt="" className="logo" />
