@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import './FoodItem.css'
 
 const FoodItem = (id,name,price,description,image) => {
   return (
