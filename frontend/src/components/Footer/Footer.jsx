@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
 
             <div className="footer-content-left">
-                <img src={assets.logo} alt="" />
+                <img src={assets.logoWhite} alt="" />
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dignissimos iusto, dicta porro eligendi quibusdam aliquam accusantium delectus! Quisquam adipisci magnam labore nesciunt deleniti veniam hic quo assumenda repellendus corporis.</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
@@ -32,6 +32,7 @@ const Footer = () => {
                 <h2>GET IN TOUCH</h2>
                 <ul>
                     <li>+251 95 340 6633</li>
+                    <li>+251 95 340 7686</li>
                     <li>eatupburger@gmail.com</li>
                 </ul>
             </div>

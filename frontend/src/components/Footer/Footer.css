@@ -21,6 +21,10 @@
     align-items: start;
     gap: 20px;
 }
+.footer-content-left img{
+    width: 250px;
+    margin-bottom: 20px;
+}
 .footer-content-left li, .footer-content-center li, .footer-content-right li{
    list-style: none;
    margin-bottom: 10px;
@@ -39,4 +43,15 @@
     margin: 20px 0;
     background-color: grey;
     border: none;
+}
+
+@media (max-width:750px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
 }
