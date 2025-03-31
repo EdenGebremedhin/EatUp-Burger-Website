@@ -1,12 +1,33 @@
-.navbar{
+/* .navbar{
     padding: 20x 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+} */
+
+.navbar {
+    position: fixed; /* Sticks it to the viewport */
+    top: 0; /* Keeps it at the top */
+    left: 0; /* Aligns to the left edge */
+    width: 100%; /* Ensures full-width */
+    padding: 20px 0px; /* Keep your existing padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Adjust if necessary */
+    z-index: 1000; /* Ensures it's above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
 }
+
+/* Prevent content from being hidden behind the navbar */
+body {
+    padding-top: 60px; /* Adjust based on navbar height */
+}
+
 
 .navbar .logo{
     width: 150px;
+    margin-left: 50px;
 }
 
 .navbar-menu{
@@ -32,6 +53,7 @@
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
+    margin-right: 50px;
 }
 .navbar button:hover{
     background-color: #fff4f2;

@@ -10,7 +10,8 @@ const Footer = () => {
 
             <div className="footer-content-left">
                 <img src={assets.logoWhite} alt="" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dignissimos iusto, dicta porro eligendi quibusdam aliquam accusantium delectus! Quisquam adipisci magnam labore nesciunt deleniti veniam hic quo assumenda repellendus corporis.</p>
+                <p>EatUp Burger – Serving fresh, delicious, and satisfying burgers along with our signature Chip Butty. From classic beef to fasting-friendly options, we’ve got something for everyone. 
+                    <span className='tagline'> Crave it, grab it, love it!</span></p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
                     <img src={assets.twitter_icon} alt="" />

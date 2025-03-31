@@ -44,6 +44,10 @@
     background-color: grey;
     border: none;
 }
+.tagline{
+    color: tomato;
+    font-weight: 500;
+}
 
 @media (max-width:750px){
     .footer-content{
