@@ -33,3 +33,8 @@
 .place-order .cart-total button{
     margin-top: 30px;
 }
+.place-order-right button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
