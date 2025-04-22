@@ -41,15 +41,15 @@ const PlaceOrder = () => {
 
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>{getTotalCartAmount()===0?0:2} birr</p>
-              console.log(getTotalCartAmount(), typeof getTotalCartAmount());
+              <p>{getTotalCartAmount()===0?0:30} birr</p>
+              {/* console.log(getTotalCartAmount(), typeof getTotalCartAmount()); */}
 
             </div>
             <hr />
 
             <div className="cart-total-details">
               <b>Total</b>
-              <b>{getTotalCartAmount()===0?0:getTotalCartAmount()+2} birr</b>
+              <b>{getTotalCartAmount()===0?0:getTotalCartAmount()+30} birr</b>
             </div>
           </div>
           <button disabled={getTotalCartAmount() === 0}>
