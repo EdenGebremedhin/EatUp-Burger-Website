@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
+import foodRouter from "./routes/foodRoute.js"
 
 
 //app config
@@ -13,6 +14,9 @@ app.use(cors()) //to access the backend from frontend
 
 //db connection
 connectDB();
+
+// api endpoint
+app.use("/api/food", foodRouter)
 
 app.get("/", (req, res)=>{   //http method to request the data from the server like(delete, update)
     res.send("API working")
