@@ -9,7 +9,7 @@ const app = express()
 const port = 4000
 
 // middleware
-app.use(express.json()) //req from frontend to backend, it will be passed used this json
+app.use(express.json()) //req from frontend to backend, it will be passed using this json
 app.use(cors()) //to access the backend from frontend
 
 //db connection
