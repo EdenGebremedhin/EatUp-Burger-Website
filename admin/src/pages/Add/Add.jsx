@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import './Add.css'
 import { assets } from '../../assets/assets'
-import axios from "axios"
+import axios from "axios" //for http requests
+import { toast } from 'react-toastify'
 
+//state management
 const Add = () => {
   const url = "http://localhost:4000";
-  const [image, setImage] = useState(false);
-  const[data, setData] = useState({
+  const [image, setImage] = useState(false); // image = stores the uploaded image(file object)
+  const[data, setData] = useState({ // data = stores the text inputs using a single object
     name:"",
     description:"",
     price:"",
     category:"Salad"
   })
-
+ 
+  // input change handler - only for the text inputs
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setData(data=>({...data, [name]:value}))
   }
+  
   //checking if data is being updated
 
   // useEffect(()=>{
@@ -25,15 +29,15 @@ const Add = () => {
   // }, [data])
 
   //Api call
-  const onSubmitHandler = async(event) =>{
+  const onSubmitHandler = async (event) =>{
     event.preventDefault() //to prevent reloading
-    const formData = new FormData();
+    const formData = new FormData(); // object to send data(both text and file)
     formData.append("name", data.name)
     formData.append("description", data.description)
-    formData.append("price", number(data.price))
+    formData.append("price", Number(data.price))
     formData.append("category", data.category)
     formData.append("image",image)
-    const response = await axios.post(`${url}/api/food/add`, formData)
+    const response = await axios.post(`${url}/api/food/add`, formData);
     if(response.data.success){
       setData({
         name:"",
@@ -42,8 +46,9 @@ const Add = () => {
         category:"Salad"
       })
       setImage(false)
+      toast.success(response.data.message)
     }else{
-
+      toast.error(response.data.message)
     }
   }
 
