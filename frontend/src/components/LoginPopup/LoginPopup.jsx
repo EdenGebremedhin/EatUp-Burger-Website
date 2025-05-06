@@ -26,7 +26,7 @@ const LoginPopup = ({setShowLogin}) => {
 
     const onLogin = async(event)=>{
         event.preventDefault()
-         //console.log("Login/Register form submitted");
+        // console.log("Login/Register form submitted");
         let newUrl = url;
         if(currentState ==="Login"){
             newUrl+="/api/user/login"
