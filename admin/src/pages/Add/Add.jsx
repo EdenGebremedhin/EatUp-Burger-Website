@@ -5,8 +5,8 @@ import axios from "axios" //for http requests
 import { toast } from 'react-toastify'
 
 //state management
-const Add = () => {
-  const url = "http://localhost:4000";
+const Add = ({url}) => {
+  
   const [image, setImage] = useState(false); // image = stores the uploaded image(file object)
   const[data, setData] = useState({ // data = stores the text inputs using a single object
     name:"",
