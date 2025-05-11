@@ -30,6 +30,13 @@ const StoreContextProvider = (props) => {
     return totalAmount;
   };
 
+//to prevent loging out when page is reloaded
+  useEffect(()=>{
+    if(localStorage.getItem("token")){
+      setToken(localStorage.getItem("token"));
+    }
+  },[])
+
   // useEffect(()=>{
   //     console.log(cartItems)
   // }, [cartItems])
