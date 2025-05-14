@@ -32,13 +32,14 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
-// load the food item from the db
+
+
+
+// // load the food item from the db
 const fetchFoodList = async () => {
-  cosnt response = await axios.get(url+"/api/food/list");
+  const response = await axios.get(url+"/api/food/list");
   setFoodList(response.data.data)
 }
-
-
 
   useEffect(()=>{
     
@@ -51,9 +52,9 @@ const fetchFoodList = async () => {
     loadData();
   },[])
 
-  // useEffect(()=>{
-  //     console.log(cartItems)
-  // }, [cartItems])
+  useEffect(()=>{
+      console.log(cartItems)
+  }, [cartItems])
 
   const contextValue = {
     food_list,

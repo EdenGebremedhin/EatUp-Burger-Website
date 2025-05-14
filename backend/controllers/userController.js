@@ -26,12 +26,12 @@ const loginUser = async (req, res) => {
         console.log(error);
         res.json({success:false,message:"Error"})
     }
-}
+} 
 const createToken = (id) => {
     return jwt.sign({id},process.env.JWT_SECRET)
 }
-
-//register user
+ 
+//register user 
 const registerUser = async (req, res) => {
     const {name, password, email} = req.body;
     try {
