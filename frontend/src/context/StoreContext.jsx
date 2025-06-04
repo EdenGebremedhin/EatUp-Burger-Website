@@ -38,7 +38,8 @@ const StoreContextProvider = (props) => {
 // // load the food item from the db
 const fetchFoodList = async () => {
   const response = await axios.get(url+"/api/food/list");
-  setFoodList(response.data.data)
+  setFoodList(response.data.data);
+  console.log("Fetched food list:", response.data.data);
 }
 
   useEffect(()=>{
