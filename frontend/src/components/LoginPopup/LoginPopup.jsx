@@ -12,7 +12,7 @@ const LoginPopup = ({setShowLogin}) => {
     const [data, setData] = useState({
         name:"",
         email:"",
-        password:""
+        password:"" 
     })
     // take the data from the input and save it in the state variable
     const onChangeHandler = (event) => {
