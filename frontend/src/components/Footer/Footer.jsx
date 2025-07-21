@@ -18,7 +18,7 @@ const Footer = () => {
                     <img src={assets.linkedin_icon} alt="" />
                 </div>
             </div>
-
+ 
             <div className="footer-content-center">
                 <h2>EATUP BURGER</h2>
                 <ul>

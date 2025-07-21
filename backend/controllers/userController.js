@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
         // validating email format and strong password
         if(!validator.isEmail(email)){
             return res.json({success:false, messsage: "Please enter a valid email"})
-        }
+        } 
         if(password.length < 8){
             return res.json({success:false, messsage: "Please enter a strong password"})
         }
@@ -56,9 +56,9 @@ const registerUser = async (req, res) => {
             email:email,
             password:hashedPassword
         })
-
+ 
         //saving the user in the db
-        const user = await newUser.save()
+        const user = await newUser.save() 
         const token = createToken(user._id)
         res.json({success:true,token})
 
